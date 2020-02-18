@@ -1,15 +1,15 @@
 # Project1_Glenn
 
-import pandas as pd
-import numpy
-import numpy as np
-import math
-import pylab
-import matplotlib as plt
-import matplotlib.pyplot as plt
-from pandas import DataFrame, Series
-import matplotlib.patches as mpatches
-from pylab import plot, ylim, xlim, show, xlabel, ylabel, grid
+    import pandas as pd
+    import numpy
+    import numpy as np
+    import math
+    import pylab
+    import matplotlib as plt
+    import matplotlib.pyplot as plt
+    from pandas import DataFrame, Series
+    import matplotlib.patches as mpatches
+    from pylab import plot, ylim, xlim, show, xlabel, ylabel, grid
 
 # Reading All the Data
 
