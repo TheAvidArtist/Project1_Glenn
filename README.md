@@ -1,5 +1,11 @@
 # Project1_Glenn
 
+# Introduction
+
+In this report I will compare information (number of dives, sound of speed profile in day vs night/location, etc) from different CTDs.
+
+# Imports
+
     import pandas as pd
     import numpy
     import numpy as np
@@ -267,6 +273,12 @@
     print("The number of dives in Summer (7) is " + str(DivesinSummer7))
 
 
+# Comparing the number of dives in Winter vs Summer
+
+Barring the first data point, the shallow profiler seems to have more dives per 24 hours.  I would assume this is because there is a lot less ground to cover and if they are moving the same speed the CTD would go up and down more times in the shallow waters
+
+
+
 # Plotting SSP For Each Dive
 
 # First data set
@@ -509,7 +521,7 @@
     plt.legend(handles=[red_patch, blue_patch])
 
 
-# Finding the Max SSP Value in Each Season
+#   Finding the Max SSP Value in Each Season
 
     ssp_Winter=(max(cW1),max(cW2),max(cW3),max(cW4),max(cW5),max(cW6),max(cW7))
     Max_ssp_Winter=max(ssp_Winter)
@@ -522,15 +534,17 @@
     Max_ssp_Summer=max(max(cS1),max(cS2),max(cS3),max(cS4),max(cS5),max(cS6),max(cS7))
     print(ssp_Summer)
     print(Max_ssp_Summer)
+    
 
-#We can see that in Winter, the highest ssp is from cW5, which corresponds to Oregon Slope Base Deep Profiler. In Summer, the highest ssp is from cS2, which is from the Oregon Offshore Cabled Shallow Profiler.
+Per the code, we can see that in Winter, the highest ssp is 1503m/s from cW5, which corresponds to Oregon Slope Base Deep Profiler. In Summer, the highest ssp is 1510m/s from cS2, which is from the Oregon Offshore Cabled Shallow Profiler.  Since the farther away from the equator (higher latitudes) you get, the colder it gets, water will have a higher density at latitudes further from the equator and therefore a faster speed of sound.
+
 
 # SSP Profile in Day vs Night
 
-#Since I only chose data from 7am to 7am in Pacific time, day and night can be compared easily by splitting the data evenly in half - 7am to 7pm (day) and 7pm to 7am (night)
+
 
     plt.figure(19)
-        plt.scatter(timeW1,cW1)
+    plt.scatter(timeW1,cW1)
     plt.title('time vs Speed of Sound (Winter1)')
     plt.xlabel('time (s)')
     plt.ylabel('Speed of sound (m/s)')
@@ -614,6 +628,8 @@
     plt.ylabel('Speed of sound (m/s)')
 
 
+Since I chose the same time frame for each data set (7am to 7am in Pacific Standard Time), the first half of the graph is the day time and the second half is nighttime.  We can see that most the graphs are symmetric, implying that there isn’t much of a difference between the dives in day or night, except in Winter 5 and 6, which corresponds to Oregon Slope Base Deep Profile and Axial Base Shallow Profiler.  In those cases, the CTD only seemed to dive deep during the day.  I would guess that this is because the water is slightly warmer and is less difficult to move through.
+
 
 # SSP Profile in Winter vs Summer
 
@@ -661,3 +677,15 @@
     cyan_patch = mpatches.Patch(color='cyan', label='6')
     violet_patch = mpatches.Patch(color='violet', label='7')
     plt.legend(handles=[blue_patch, purple_patch, red_patch, green_patch, yellow_patch, cyan_patch, violet_patch])
+
+
+For the most part, they are the same shape which shows a general trend.  However, in the summer the speed of sound can increase more near the surface, most likely due to the sun evaporating the surface water and causing a much higher salinity.
+
+
+# Effect of Location
+
+There isn’t a clear correlation between location and ssp profiles as we can see from the first 14 graphs.  Mostly they seem to follow the same trends of ssp rising in the shallow profilers or falling with the deep profilers, except for the offshore Oregon one.  We should know that the farther we go from the equator, the higher the ssp profiles should go, however, since the water is getting colder and denser.
+
+# Conclusion
+
+It is hard to come to any concrete conclusions as this data does not seem entirely accurate.  It is difficult to tell the difference of information between profilers in day vs night or see the effect of location, which does not seem entirely correct.
