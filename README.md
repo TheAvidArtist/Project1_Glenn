@@ -11,7 +11,7 @@ from pandas import DataFrame, Series
 import matplotlib.patches as mpatches
 from pylab import plot, ylim, xlim, show, xlabel, ylabel, grid
 
-## Reading All the Data
+# Reading All the Data
 
 
 df_W1=pd.read_csv('OregonShelfSurfacePiercingProfilerMooringWinter.csv')
@@ -35,7 +35,7 @@ df_S6=pd.read_csv('AxialBaseShallowProfilerSummer.csv')
 df_W7=pd.read_csv('AxialBaseDeepProfilerWinter.csv')
 df_S7=pd.read_csv('AxialBaseDeepProfilerSummer.csv')
 
-## Defining Variables
+# Defining Variables
 
 # First data set
 
@@ -60,7 +60,7 @@ xW1 = cW1
 yS1 = PS1
 xS1 = cS1
 
-#Second data set
+# Second data set
 
 PW2=df_W2.seawater_pressure
 TW2=df_W2.seawater_temperature
@@ -83,7 +83,7 @@ xW2 = cW2
 yS2 = PS2
 xS2 = cS2
 
-#Third data set
+# Third data set
 
 PW3=df_W3.pressure
 TW3=df_W3.temp
@@ -106,7 +106,7 @@ xW3 = cW3
 yS3 = PS3
 xS3 = cS3
 
-#Fourth data set
+# Fourth data set
 
 PW4=df_W4.seawater_pressure
 TW4=df_W4.seawater_temperature
@@ -130,7 +130,7 @@ yS4 = PS4
 xS4 = cS4
 
 
-#Fifth data set
+# Fifth data set
 
 PW5=df_W5.pressure
 TW5=df_W5.temp
@@ -153,7 +153,7 @@ xW5 = cW5
 yS5 = PS5
 xS5 = cS5
 
-#Sixth data set
+# Sixth data set
 
 PW6=df_W6.seawater_pressure
 TW6=df_W6.seawater_temperature
@@ -177,7 +177,7 @@ yS6 = PS6
 xS6 = cS6
 
 
-#Seventh data set
+# Seventh data set
 
 
 PW7=df_W7.pressure
@@ -201,9 +201,9 @@ xW7 = cW7
 yS7 = PS7
 xS7 = cS7
 
-##Calculating Number of Dives
+# Calculating Number of Dives
 
-#Defining the function
+# Defining the function
 
 def diveCount(depth):
     
@@ -222,7 +222,7 @@ def diveCount(depth):
             
     return count
 
-#Number of dives for each data set
+# Number of dives for each data set
 
 DivesinWinter1 = diveCount(PW1)
 DivesinSummer1 = diveCount(PS1)
@@ -267,9 +267,9 @@ print("The number of dives in Winter (7) is " + str(DivesinWinter7))
 print("The number of dives in Summer (7) is " + str(DivesinSummer7))
 
 
-##Plotting SSP For Each Dive
+# Plotting SSP For Each Dive
 
-#First data set
+# First data set
 
 def AvgDataSpeed(x,y):
     Depth=y
@@ -332,7 +332,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Second data set
+# Second data set
 
 [y3,x3]=AvgDataSpeed(cW2,PW2)
 
@@ -362,7 +362,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Third data set
+# Third data set
 
 [y5,x5]=AvgDataSpeed(cW3,PW3)
 
@@ -391,7 +391,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Fourth data set
+# Fourth data set
 
 [y7,x7]=AvgDataSpeed(cW4,PW4)
 
@@ -420,7 +420,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Fifth data set
+# Fifth data set
 
 [y9,x9]=AvgDataSpeed(cW5,PW5)
 
@@ -449,7 +449,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Sixth data set
+# Sixth data set
 
 [y11,x11]=AvgDataSpeed(cW6,PW6)
 
@@ -480,7 +480,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-#Seventh data set
+# Seventh data set
 
 [y13,x13]=AvgDataSpeed(cW7,PW7)
 
@@ -509,7 +509,7 @@ blue_patch = mpatches.Patch(color='blue', label='ssp')
 plt.legend(handles=[red_patch, blue_patch])
 
 
-##Finding the Max SSP Value in Each Season
+# Finding the Max SSP Value in Each Season
 
 ssp_Winter=(max(cW1),max(cW2),max(cW3),max(cW4),max(cW5),max(cW6),max(cW7))
 Max_ssp_Winter=max(ssp_Winter)
@@ -525,7 +525,7 @@ print(Max_ssp_Summer)
 
 #We can see that in Winter, the highest ssp is from cW5, which corresponds to Oregon Slope Base Deep Profiler. In Summer, the highest ssp is from cS2, which is from the Oregon Offshore Cabled Shallow Profiler.
 
-##SSP Profile in Day vs Night
+# SSP Profile in Day vs Night
 
 #Since I only chose data from 7am to 7am in Pacific time, day and night can be compared easily by splitting the data evenly in half - 7am to 7pm (day) and 7pm to 7am (night)
 
@@ -615,7 +615,7 @@ plt.ylabel('Speed of sound (m/s)')
 
 
 
-##SSP Profile in Winter vs Summer
+# SSP Profile in Winter vs Summer
 
 plt.figure(17)
 plt.plot(xW1,yW1, 'blue')
