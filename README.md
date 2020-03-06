@@ -80,7 +80,7 @@ Figure 6: Axial Base Shallow Profiler
 ![Fig7](https://github.com/TheAvidArtist/Project1_Glenn/blob/master/7.PNG)
 
 
-Figure 2: Axial Base Deep Profiler
+Figure 7: Axial Base Deep Profiler
 
 
 # Comparing the number of dives per day of the shallow profilers vs the deep profilers
