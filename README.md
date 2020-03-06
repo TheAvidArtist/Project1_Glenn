@@ -25,6 +25,7 @@ In this table I will count the number of dives per 24 hours for each profiler.
 | Axial Base Shallow Profiler  | Summer | 1 |
 | Axial Base Deep Profiler  | Winter | 1 |
 | Axial Base Deep Profiler  | Summer | 1 |
+
 Table 1
 
 ![Fig1](https://github.com/TheAvidArtist/Project1_Glenn/blob/master/1.PNG)
@@ -94,6 +95,7 @@ Figure 7: Axial Base Deep Profiler
 | 6 | 4 |
 | 7 | 1 |
 | 1 | 1 |
+
 Table 2
 
 Barring the first data point, the shallow profiler seems to have more dives per 24 hours.  I would assume this is because there is a lot less ground to cover and if they are moving the same speed the CTD would go up and down more times in the shallow waters.
