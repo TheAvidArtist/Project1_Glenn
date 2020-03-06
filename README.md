@@ -6,7 +6,7 @@ In this report I will compare information (number of dives, sound of speed profi
 
 
 | CTD  | Season | Number of Dives |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | 
 | Oregon Shelf Surface Piercing Profiler Mooring  | Winter | 2 |
 | Oregon Shelf Surface Piercing Profiler Mooring  | Summer | 5 |
 | Oregon Offshore Cabled Shallow Profiler Mooring  | Winter | 7 |
